@@ -4,15 +4,20 @@ import LocationList from "./location/LocationList"
 import ProductList from "./product/ProductList"
 import { ProductProvider } from "./product/ProductProvider"
 import { ProductTypeProvider } from "./product/ProductTypeProvider"
+import { EmployeeProvider } from "./employee/EmployeeProvider"
+import EmployeeList from "./employee/EmployeeList"
 
 export default () => (
     <>
         <ProductProvider>
             <ProductTypeProvider>
-                <LocationProvider>
-                    <LocationList />
-                    <ProductList />
-                </LocationProvider>
+                <EmployeeProvider>
+                  <LocationProvider>
+                        <LocationList />
+                        <ProductList />
+                        <EmployeeList />
+                    </LocationProvider>
+                </EmployeeProvider>
             </ProductTypeProvider>
         </ProductProvider>
     </>
