@@ -1,11 +1,16 @@
 import React from "react"
 import { LocationProvider } from "./location/LocationProvider"
 import LocationList from "./location/LocationList"
+import ProductList from "./product/ProductList"
+import { ProductProvider } from "./product/ProductProvider"
 
 export default () => (
     <>
-        <LocationProvider>
-            <LocationList />
-        </LocationProvider>
+        <ProductProvider>
+            <LocationProvider>
+                <LocationList />
+                <ProductList />
+            </LocationProvider>
+        </ProductProvider>
     </>
 )
